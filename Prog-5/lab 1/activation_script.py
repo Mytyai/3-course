@@ -4,7 +4,7 @@ import requests
 from urllib.request import urlopen
 from importlib.abc import PathEntryFinder, Loader
 from importlib.util import spec_from_loader
-
+# проверка
 
 class URLFinder(PathEntryFinder):
     def __init__(self, url, available):
