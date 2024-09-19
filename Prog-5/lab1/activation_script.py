@@ -4,7 +4,7 @@ import requests
 from urllib.request import urlopen
 from importlib.abc import PathEntryFinder, Loader
 from importlib.util import spec_from_loader
-# проверка
+
 
 class URLFinder(PathEntryFinder):
     def __init__(self, url, available):
@@ -52,10 +52,7 @@ def url_hook(some_str):
     return URLFinder(some_str, modnames)
 
 
-
 sys.path_hooks.append(url_hook)
-print("Текущие хуки:", sys.path_hooks)
-
 
 sys.path.append("http://localhost:8000")
 
