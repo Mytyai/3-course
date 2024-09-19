@@ -1,11 +1,11 @@
 # Щеткин Дмитрий ИВТ 2.1
 # Прог-5 Лабораторная работа 1. Реализация удаленного импорта
 
-Создаем файл с функцией [myremotemodule.py](lab1/rootserver/myremotemodule.py) в папке rootserver
+Создаем файл с функцией [myremotemodule.py](rootserver/myremotemodule.py) в папке rootserver
 
-Создаем файл [activation_script.py](lab1/activation_script.py)
+Создаем файл [activation_script.py](activation_script.py)
 
-При попытке выполнить код без сервере возникает ошибка:
+При попытке выполнить код без сервера возникает ошибка:
 ![](photos/1.png)
 
 Запускаем сервер с помощью команды:
