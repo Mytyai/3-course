@@ -57,5 +57,5 @@ def url_hook(some_str):
 sys.path_hooks.append(url_hook)
 sys.path.append("http://localhost:8000")
 
-import myremotemodule
-myremotemodule.myfoo()
+import myremotepackage
+myremotepackage.myfoo()
