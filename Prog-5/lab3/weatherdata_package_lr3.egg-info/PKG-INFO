@@ -1,3 +1,18 @@
+Metadata-Version: 2.1
+Name: weatherdata_package_lr3
+Version: 1.1.0
+Summary: A package to fetch weather data using OpenWeatherMap API
+Home-page: https://github.com/Mytyai/3-course/tree/master/Prog-5/
+Author: Mityai
+Author-email: shetkindima@yandex.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pytest
+
 # Щеткин Дмитрий ИВТ 2.1
 # Прог-5 Лабораторная работа 3. Создание своего пакета. Публикация на pypi
 
@@ -27,10 +42,3 @@ python setup.py sdist bdist_wheel
 ```bash
 twine upload --repository-url https://test.pypi.org/legacy/ dist/* -u __token__ -p <API-токен с Test PyPI>
 ```
-
-При успешной загрузке пакета в терминале появится ссылка на загруженный пакет в Test PyPI:
-![](photos/3.png)
-
-Ссылка на загруженный пакет:
-https://test.pypi.org/project/weatherdata-package-lr3/1.1.0/
-
