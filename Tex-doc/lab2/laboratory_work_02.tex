@@ -1,0 +1,70 @@
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com), 2020-2022 moderncv maintainers (github.com/moderncv).
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{grey}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{136.00005pt} 
+
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math} 
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+% document language
+\usepackage[english]{babel}
+
+\name{Mitya}{Shchetkin}
+\born{29 March 2004} 
+\address{Moika River embankment, 48}{191186}{Saint Petersburg Russia}
+\phone[mobile]{+7~(777)~777~77~77}
+\email{shetkindima@yandex.ru}
+
+% Social icons
+\social[github]{Mytyai}                              % optional, remove / comment 
+
+\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+%---------------------------------------------------------------------------------
+%            content
+%---------------------------------------------------------------------------------
+\begin{document}
+
+\makecvtitle
+
+\section{Education}
+\cventry{2022--2026}{Bachelor's Degree}{Herzen University}{Saint Petersburg}{\textit{3}}{Institute of Information Technology and Technology Education}
+
+\cventry{2023--2024}{Digital Program}{Saint Petersburg Electrotechnical University}{Saint Petersburg}{\textit{None}}{Digital Department}
+
+\section{Languages}
+\cvitemwithcomment{Russian}{Native speaker}{}
+\cvitemwithcomment{English}{Elementary}{}
+
+\section{Skill matrix}
+\cvskillhead[-0.1em]
+\cvskillentry*{Language:}{3}{Python}{3}{I managed to write millions of projects in python!}
+\cvskillentry*{OS:}{3}{Windows}{8}{I'm a big fan of Windows 10.}
+\cvskillentry*{Methods:}{2}{Git}{2}{Actively used for version control in projects.}
+
+
+\section{Interests}
+\cvitem{Foosball}{Fast-paced table game simulating soccer matches.}
+\cvitem{Marathon}{Long-distance running events testing endurance and grit.}
+\cvitem{Database}{Organizing and managing data for efficient retrieval.}
+\cvitem{Testing}{Evaluating software to ensure functionality and reliability.}
+
+\clearpage
+
+\end{document}
