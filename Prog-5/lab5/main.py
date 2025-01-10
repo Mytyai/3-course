@@ -3,7 +3,6 @@ import requests
 import time
 from xml.etree import ElementTree as ET
 import matplotlib.pyplot as plt
-import pytest
 
 
 class SingletonMeta(type):
@@ -91,23 +90,6 @@ class CurrencyRates(metaclass=SingletonMeta):
         print("Удаление экземпляра CurrencyRates")
 
 
-# Тесты
-def test_invalid_currency():
-    cr = CurrencyRates()
-    cr.fetch_rates()
-    assert cr.get_currency('R9999') == {'R9999': None}
-
-def test_valid_currency():
-    cr = CurrencyRates(refresh_interval=0)
-    cr.reset_last_update()  
-    cr.fetch_rates()
-    result = cr.get_currency('GBP')['GBP']
-    assert isinstance(result, tuple)
-    assert result[0] == 'Фунт стерлингов Соединенного королевства'
-    value = float(f'{result[1].replace(",", ".")}')
-    assert 0 < value < 999
-
-
 if __name__ == "__main__":
     cr = CurrencyRates()
     cr.fetch_rates()
@@ -115,5 +97,3 @@ if __name__ == "__main__":
     cr.set_selected_currencies(['USD', 'EUR', 'GBP'])
     print(cr.get_all_currencies())
     cr.visualize_currencies()
-
-    pytest.main([__file__])

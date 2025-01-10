@@ -10,3 +10,10 @@
  ![](photos/2.png)
  - было возможно использовать декоратор к базовой версии (CurrenciesList) или к другому декоратору (ConcreteDecoratorJSON) и получить данные в формате csv (class ConcreteDecoratorCSV).
  ![](photos/3.png)
+
+### Тесты
+
+Файл [test.py](test.py) для тестов декораторов, методов и запросов.
+
+При вводе `pytest test.py` получаем:
+![](photos/test.png)

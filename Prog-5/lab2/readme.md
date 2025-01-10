@@ -10,3 +10,9 @@
 При запуске main.py получаем:
 ![](photos/1.png)
 
+### Тесты
+
+Файл [getweatherdata_test.py](getweatherdata_test.py) для тестов
+
+При вводе `pytest getweatherdata_test.py` получаем:
+![](photos/test.png)
