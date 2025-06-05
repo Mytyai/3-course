@@ -8,7 +8,7 @@
 - [x] [ЛР 5. Предсказание дефолта по кредиту](https://github.com/Mytyai/3-course/tree/master/Prog-6/lab5)
 - [] ЛР 6. Функции для нахождения чисел с помощью Cython
 - [x] [ЛР 7. Рекомендательные системы + Бонус](https://github.com/Mytyai/3-course/tree/master/Prog-6/lab7)
-- [] ЛР 8. Распознавание лиц на изображении с веб-камеры
+- [x] [ЛР 8. Распознавание лиц на изображении с веб-камеры](https://github.com/Mytyai/3-course/tree/master/Prog-6/lab8)
 
 ### Список самостоятельных работ:
 - [x] [СР 1. Построить более точную модель для предсказания цены на подержанные автомобили Ford](https://github.com/Mytyai/3-course/tree/master/Prog-6/sr1)
