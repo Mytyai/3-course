@@ -6,7 +6,7 @@
 - [x] [ЛР 3. Предсказание цены на подержанные автомобили Ford с использованием pandas + Бонус](https://github.com/Mytyai/3-course/tree/master/Prog-6/lab3)
 - [x] [ЛР 4. Предсказание цен на недвижимость + Бонус + Ср 1, 2, 3](https://github.com/Mytyai/3-course/tree/master/Prog-6/lab4)
 - [x] [ЛР 5. Предсказание дефолта по кредиту](https://github.com/Mytyai/3-course/tree/master/Prog-6/lab5)
-- [] ЛР 6. Функции для нахождения чисел с помощью Cython
+- [x] [ЛР 6. Функции для нахождения чисел с помощью Cython](https://github.com/Mytyai/3-course/tree/master/Prog-6/lab6)
 - [x] [ЛР 7. Рекомендательные системы + Бонус](https://github.com/Mytyai/3-course/tree/master/Prog-6/lab7)
 - [x] [ЛР 8. Распознавание лиц на изображении с веб-камеры](https://github.com/Mytyai/3-course/tree/master/Prog-6/lab8)
 
