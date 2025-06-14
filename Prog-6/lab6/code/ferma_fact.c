@@ -4,12 +4,12 @@
 {
     "distutils": {
         "depends": [],
-        "name": "cy_fermat_nogil",
+        "name": "ferma_fact",
         "sources": [
-            "cy_fermat_nogil.pyx"
+            "ferma_fact.pyx"
         ]
     },
-    "module_name": "cy_fermat_nogil"
+    "module_name": "ferma_fact"
 }
 END: Cython Metadata */
 
@@ -1229,8 +1229,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__cy_fermat_nogil
-#define __PYX_HAVE_API__cy_fermat_nogil
+#define __PYX_HAVE__ferma_fact
+#define __PYX_HAVE_API__ferma_fact
 /* Early includes */
 #include <math.h>
 #ifdef _OPENMP
@@ -1481,20 +1481,13 @@ static const char *__pyx_filename;
 /* #### Code section: filename_table ### */
 
 static const char *__pyx_f[] = {
-  "cy_fermat_nogil.pyx",
+  "ferma_fact.pyx",
 };
 /* #### Code section: utility_code_proto_before_types ### */
 /* ForceInitThreads.proto */
 #ifndef __PYX_FORCE_INIT_THREADS
   #define __PYX_FORCE_INIT_THREADS 0
 #endif
-
-/* NoFastGil.proto */
-#define __Pyx_PyGILState_Ensure PyGILState_Ensure
-#define __Pyx_PyGILState_Release PyGILState_Release
-#define __Pyx_FastGIL_Remember()
-#define __Pyx_FastGIL_Forget()
-#define __Pyx_FastGilFuncInit()
 
 /* #### Code section: numeric_typedefs ### */
 /* #### Code section: complex_type_declarations ### */
@@ -1583,19 +1576,6 @@ static const char *__pyx_f[] = {
 #define __Pyx_CLEAR(r)    do { PyObject* tmp = ((PyObject*)(r)); r = NULL; __Pyx_DECREF(tmp);} while(0)
 #define __Pyx_XCLEAR(r)   do { if((r) != NULL) {PyObject* tmp = ((PyObject*)(r)); r = NULL; __Pyx_DECREF(tmp);}} while(0)
 
-/* DivInt[PY_LONG_LONG].proto */
-static CYTHON_INLINE PY_LONG_LONG __Pyx_div_PY_LONG_LONG(PY_LONG_LONG, PY_LONG_LONG);
-
-/* UnaryNegOverflows.proto */
-#define __Pyx_UNARY_NEG_WOULD_OVERFLOW(x)\
-        (((x) < 0) & ((unsigned long)(x) == 0-(unsigned long)(x)))
-
-/* ErrOccurredWithGIL.proto */
-static CYTHON_INLINE int __Pyx_ErrOccurredWithGIL(void);
-
-/* ModInt[PY_LONG_LONG].proto */
-static CYTHON_INLINE PY_LONG_LONG __Pyx_mod_PY_LONG_LONG(PY_LONG_LONG, PY_LONG_LONG);
-
 /* TupleAndListFromArray.proto */
 #if CYTHON_COMPILING_IN_CPYTHON
 static CYTHON_INLINE PyObject* __Pyx_PyList_FromArray(PyObject *const *src, Py_ssize_t n);
@@ -1672,6 +1652,12 @@ static int __Pyx_ParseOptionalKeywords(PyObject *kwds, PyObject *const *kwvalues
 /* RaiseArgTupleInvalid.proto */
 static void __Pyx_RaiseArgtupleInvalid(const char* func_name, int exact,
     Py_ssize_t num_min, Py_ssize_t num_max, Py_ssize_t num_found);
+
+/* ModInt[PY_LONG_LONG].proto */
+static CYTHON_INLINE PY_LONG_LONG __Pyx_mod_PY_LONG_LONG(PY_LONG_LONG, PY_LONG_LONG);
+
+/* DivInt[PY_LONG_LONG].proto */
+static CYTHON_INLINE PY_LONG_LONG __Pyx_div_PY_LONG_LONG(PY_LONG_LONG, PY_LONG_LONG);
 
 /* IncludeStructmemberH.proto */
 #include <structmember.h>
@@ -1995,35 +1981,38 @@ static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 /* #### Code section: module_declarations ### */
 
+/* Module declarations from "cython" */
+
 /* Module declarations from "libc.math" */
 
-/* Module declarations from "cy_fermat_nogil" */
-static PY_LONG_LONG __pyx_f_15cy_fermat_nogil_isqrt(PY_LONG_LONG); /*proto*/
-static int __pyx_f_15cy_fermat_nogil_is_perfect_square_c(PY_LONG_LONG); /*proto*/
-static void __pyx_f_15cy_fermat_nogil_fermat_factorization_c(PY_LONG_LONG, PY_LONG_LONG *, PY_LONG_LONG *); /*proto*/
-static PyObject *__pyx_f_15cy_fermat_nogil_fermat_factorization_nogil(PY_LONG_LONG, int __pyx_skip_dispatch); /*proto*/
+/* Module declarations from "ferma_fact" */
+static int __pyx_f_10ferma_fact_is_perfect_square(PY_LONG_LONG, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_f_10ferma_fact_fermat_factorization(PY_LONG_LONG, int __pyx_skip_dispatch); /*proto*/
 /* #### Code section: typeinfo ### */
 /* #### Code section: before_global_var ### */
-#define __Pyx_MODULE_NAME "cy_fermat_nogil"
-extern int __pyx_module_is_main_cy_fermat_nogil;
-int __pyx_module_is_main_cy_fermat_nogil = 0;
+#define __Pyx_MODULE_NAME "ferma_fact"
+extern int __pyx_module_is_main_ferma_fact;
+int __pyx_module_is_main_ferma_fact = 0;
 
-/* Implementation of "cy_fermat_nogil" */
+/* Implementation of "ferma_fact" */
 /* #### Code section: global_var ### */
 /* #### Code section: string_decls ### */
 static const char __pyx_k_N[] = "N";
-static const char __pyx_k__3[] = "?";
+static const char __pyx_k_n[] = "n";
+static const char __pyx_k__5[] = "?";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_test[] = "__test__";
+static const char __pyx_k_ferma_fact[] = "ferma_fact";
 static const char __pyx_k_is_coroutine[] = "_is_coroutine";
-static const char __pyx_k_cy_fermat_nogil[] = "cy_fermat_nogil";
+static const char __pyx_k_ferma_fact_pyx[] = "ferma_fact.pyx";
+static const char __pyx_k_is_perfect_square[] = "is_perfect_square";
 static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
-static const char __pyx_k_cy_fermat_nogil_pyx[] = "cy_fermat_nogil.pyx";
-static const char __pyx_k_fermat_factorization_nogil[] = "fermat_factorization_nogil";
+static const char __pyx_k_fermat_factorization[] = "fermat_factorization";
 /* #### Code section: decls ### */
-static PyObject *__pyx_pf_15cy_fermat_nogil_fermat_factorization_nogil(CYTHON_UNUSED PyObject *__pyx_self, PY_LONG_LONG __pyx_v_N); /* proto */
+static PyObject *__pyx_pf_10ferma_fact_is_perfect_square(CYTHON_UNUSED PyObject *__pyx_self, PY_LONG_LONG __pyx_v_n); /* proto */
+static PyObject *__pyx_pf_10ferma_fact_2fermat_factorization(CYTHON_UNUSED PyObject *__pyx_self, PY_LONG_LONG __pyx_v_N); /* proto */
 /* #### Code section: late_includes ### */
 /* #### Code section: module_state ### */
 typedef struct {
@@ -2055,19 +2044,26 @@ typedef struct {
   #endif
   #if CYTHON_USE_MODULE_STATE
   #endif
+  #if CYTHON_USE_MODULE_STATE
+  #endif
   PyObject *__pyx_n_s_N;
-  PyObject *__pyx_n_s__3;
+  PyObject *__pyx_n_s__5;
   PyObject *__pyx_n_s_asyncio_coroutines;
   PyObject *__pyx_n_s_cline_in_traceback;
-  PyObject *__pyx_n_s_cy_fermat_nogil;
-  PyObject *__pyx_kp_s_cy_fermat_nogil_pyx;
-  PyObject *__pyx_n_s_fermat_factorization_nogil;
+  PyObject *__pyx_n_s_ferma_fact;
+  PyObject *__pyx_kp_s_ferma_fact_pyx;
+  PyObject *__pyx_n_s_fermat_factorization;
   PyObject *__pyx_n_s_is_coroutine;
+  PyObject *__pyx_n_s_is_perfect_square;
   PyObject *__pyx_n_s_main;
+  PyObject *__pyx_n_s_n;
   PyObject *__pyx_n_s_name;
   PyObject *__pyx_n_s_test;
+  PyObject *__pyx_int_2;
   PyObject *__pyx_tuple_;
+  PyObject *__pyx_tuple__3;
   PyObject *__pyx_codeobj__2;
+  PyObject *__pyx_codeobj__4;
 } __pyx_mstate;
 
 #if CYTHON_USE_MODULE_STATE
@@ -2111,18 +2107,23 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_FusedFunctionType);
   #endif
   Py_CLEAR(clear_module_state->__pyx_n_s_N);
-  Py_CLEAR(clear_module_state->__pyx_n_s__3);
+  Py_CLEAR(clear_module_state->__pyx_n_s__5);
   Py_CLEAR(clear_module_state->__pyx_n_s_asyncio_coroutines);
   Py_CLEAR(clear_module_state->__pyx_n_s_cline_in_traceback);
-  Py_CLEAR(clear_module_state->__pyx_n_s_cy_fermat_nogil);
-  Py_CLEAR(clear_module_state->__pyx_kp_s_cy_fermat_nogil_pyx);
-  Py_CLEAR(clear_module_state->__pyx_n_s_fermat_factorization_nogil);
+  Py_CLEAR(clear_module_state->__pyx_n_s_ferma_fact);
+  Py_CLEAR(clear_module_state->__pyx_kp_s_ferma_fact_pyx);
+  Py_CLEAR(clear_module_state->__pyx_n_s_fermat_factorization);
   Py_CLEAR(clear_module_state->__pyx_n_s_is_coroutine);
+  Py_CLEAR(clear_module_state->__pyx_n_s_is_perfect_square);
   Py_CLEAR(clear_module_state->__pyx_n_s_main);
+  Py_CLEAR(clear_module_state->__pyx_n_s_n);
   Py_CLEAR(clear_module_state->__pyx_n_s_name);
   Py_CLEAR(clear_module_state->__pyx_n_s_test);
+  Py_CLEAR(clear_module_state->__pyx_int_2);
   Py_CLEAR(clear_module_state->__pyx_tuple_);
+  Py_CLEAR(clear_module_state->__pyx_tuple__3);
   Py_CLEAR(clear_module_state->__pyx_codeobj__2);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__4);
   return 0;
 }
 #endif
@@ -2144,18 +2145,23 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_FusedFunctionType);
   #endif
   Py_VISIT(traverse_module_state->__pyx_n_s_N);
-  Py_VISIT(traverse_module_state->__pyx_n_s__3);
+  Py_VISIT(traverse_module_state->__pyx_n_s__5);
   Py_VISIT(traverse_module_state->__pyx_n_s_asyncio_coroutines);
   Py_VISIT(traverse_module_state->__pyx_n_s_cline_in_traceback);
-  Py_VISIT(traverse_module_state->__pyx_n_s_cy_fermat_nogil);
-  Py_VISIT(traverse_module_state->__pyx_kp_s_cy_fermat_nogil_pyx);
-  Py_VISIT(traverse_module_state->__pyx_n_s_fermat_factorization_nogil);
+  Py_VISIT(traverse_module_state->__pyx_n_s_ferma_fact);
+  Py_VISIT(traverse_module_state->__pyx_kp_s_ferma_fact_pyx);
+  Py_VISIT(traverse_module_state->__pyx_n_s_fermat_factorization);
   Py_VISIT(traverse_module_state->__pyx_n_s_is_coroutine);
+  Py_VISIT(traverse_module_state->__pyx_n_s_is_perfect_square);
   Py_VISIT(traverse_module_state->__pyx_n_s_main);
+  Py_VISIT(traverse_module_state->__pyx_n_s_n);
   Py_VISIT(traverse_module_state->__pyx_n_s_name);
   Py_VISIT(traverse_module_state->__pyx_n_s_test);
+  Py_VISIT(traverse_module_state->__pyx_int_2);
   Py_VISIT(traverse_module_state->__pyx_tuple_);
+  Py_VISIT(traverse_module_state->__pyx_tuple__3);
   Py_VISIT(traverse_module_state->__pyx_codeobj__2);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__4);
   return 0;
 }
 #endif
@@ -2188,546 +2194,377 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #endif
 #if CYTHON_USE_MODULE_STATE
 #endif
+#if CYTHON_USE_MODULE_STATE
+#endif
 #define __pyx_n_s_N __pyx_mstate_global->__pyx_n_s_N
-#define __pyx_n_s__3 __pyx_mstate_global->__pyx_n_s__3
+#define __pyx_n_s__5 __pyx_mstate_global->__pyx_n_s__5
 #define __pyx_n_s_asyncio_coroutines __pyx_mstate_global->__pyx_n_s_asyncio_coroutines
 #define __pyx_n_s_cline_in_traceback __pyx_mstate_global->__pyx_n_s_cline_in_traceback
-#define __pyx_n_s_cy_fermat_nogil __pyx_mstate_global->__pyx_n_s_cy_fermat_nogil
-#define __pyx_kp_s_cy_fermat_nogil_pyx __pyx_mstate_global->__pyx_kp_s_cy_fermat_nogil_pyx
-#define __pyx_n_s_fermat_factorization_nogil __pyx_mstate_global->__pyx_n_s_fermat_factorization_nogil
+#define __pyx_n_s_ferma_fact __pyx_mstate_global->__pyx_n_s_ferma_fact
+#define __pyx_kp_s_ferma_fact_pyx __pyx_mstate_global->__pyx_kp_s_ferma_fact_pyx
+#define __pyx_n_s_fermat_factorization __pyx_mstate_global->__pyx_n_s_fermat_factorization
 #define __pyx_n_s_is_coroutine __pyx_mstate_global->__pyx_n_s_is_coroutine
+#define __pyx_n_s_is_perfect_square __pyx_mstate_global->__pyx_n_s_is_perfect_square
 #define __pyx_n_s_main __pyx_mstate_global->__pyx_n_s_main
+#define __pyx_n_s_n __pyx_mstate_global->__pyx_n_s_n
 #define __pyx_n_s_name __pyx_mstate_global->__pyx_n_s_name
 #define __pyx_n_s_test __pyx_mstate_global->__pyx_n_s_test
+#define __pyx_int_2 __pyx_mstate_global->__pyx_int_2
 #define __pyx_tuple_ __pyx_mstate_global->__pyx_tuple_
+#define __pyx_tuple__3 __pyx_mstate_global->__pyx_tuple__3
 #define __pyx_codeobj__2 __pyx_mstate_global->__pyx_codeobj__2
+#define __pyx_codeobj__4 __pyx_mstate_global->__pyx_codeobj__4
 /* #### Code section: module_code ### */
 
-/* "cy_fermat_nogil.pyx":4
- * from libc.math cimport sqrt
- * 
- * cdef long long isqrt(long long n) nogil:             # <<<<<<<<<<<<<<
- *     cdef long long x, y
- *     if n == 0:
+/* "ferma_fact.pyx":6
+ * @cython.boundscheck(False)
+ * @cython.wraparound(False)
+ * cpdef bint is_perfect_square(long long n):             # <<<<<<<<<<<<<<
+ *     """,     ."""
+ *     cdef long long root = <long long>floor(sqrt(n))
  */
 
-static PY_LONG_LONG __pyx_f_15cy_fermat_nogil_isqrt(PY_LONG_LONG __pyx_v_n) {
-  PY_LONG_LONG __pyx_v_x;
-  PY_LONG_LONG __pyx_v_y;
-  PY_LONG_LONG __pyx_r;
-  int __pyx_t_1;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  #ifdef WITH_THREAD
-  PyGILState_STATE __pyx_gilstate_save;
-  #endif
-
-  /* "cy_fermat_nogil.pyx":6
- * cdef long long isqrt(long long n) nogil:
- *     cdef long long x, y
- *     if n == 0:             # <<<<<<<<<<<<<<
- *         return 0
- *     x = n
- */
-  __pyx_t_1 = (__pyx_v_n == 0);
-  if (__pyx_t_1) {
-
-    /* "cy_fermat_nogil.pyx":7
- *     cdef long long x, y
- *     if n == 0:
- *         return 0             # <<<<<<<<<<<<<<
- *     x = n
- *     y = (x + 1) // 2
- */
-    __pyx_r = 0;
-    goto __pyx_L0;
-
-    /* "cy_fermat_nogil.pyx":6
- * cdef long long isqrt(long long n) nogil:
- *     cdef long long x, y
- *     if n == 0:             # <<<<<<<<<<<<<<
- *         return 0
- *     x = n
- */
-  }
-
-  /* "cy_fermat_nogil.pyx":8
- *     if n == 0:
- *         return 0
- *     x = n             # <<<<<<<<<<<<<<
- *     y = (x + 1) // 2
- *     while y < x:
- */
-  __pyx_v_x = __pyx_v_n;
-
-  /* "cy_fermat_nogil.pyx":9
- *         return 0
- *     x = n
- *     y = (x + 1) // 2             # <<<<<<<<<<<<<<
- *     while y < x:
- *         x = y
- */
-  __pyx_v_y = __Pyx_div_PY_LONG_LONG((__pyx_v_x + 1), 2);
-
-  /* "cy_fermat_nogil.pyx":10
- *     x = n
- *     y = (x + 1) // 2
- *     while y < x:             # <<<<<<<<<<<<<<
- *         x = y
- *         y = (x + n // x) // 2
- */
-  while (1) {
-    __pyx_t_1 = (__pyx_v_y < __pyx_v_x);
-    if (!__pyx_t_1) break;
-
-    /* "cy_fermat_nogil.pyx":11
- *     y = (x + 1) // 2
- *     while y < x:
- *         x = y             # <<<<<<<<<<<<<<
- *         y = (x + n // x) // 2
- *     return x
- */
-    __pyx_v_x = __pyx_v_y;
-
-    /* "cy_fermat_nogil.pyx":12
- *     while y < x:
- *         x = y
- *         y = (x + n // x) // 2             # <<<<<<<<<<<<<<
- *     return x
- * 
- */
-    if (unlikely(__pyx_v_x == 0)) {
-      #ifdef WITH_THREAD
-      PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-      #endif
-      PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
-      #ifdef WITH_THREAD
-      __Pyx_PyGILState_Release(__pyx_gilstate_save);
-      #endif
-      __PYX_ERR(0, 12, __pyx_L1_error)
-    }
-    else if (sizeof(PY_LONG_LONG) == sizeof(long) && (!(((PY_LONG_LONG)-1) > 0)) && unlikely(__pyx_v_x == (PY_LONG_LONG)-1)  && unlikely(__Pyx_UNARY_NEG_WOULD_OVERFLOW(__pyx_v_n))) {
-      #ifdef WITH_THREAD
-      PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-      #endif
-      PyErr_SetString(PyExc_OverflowError, "value too large to perform division");
-      #ifdef WITH_THREAD
-      __Pyx_PyGILState_Release(__pyx_gilstate_save);
-      #endif
-      __PYX_ERR(0, 12, __pyx_L1_error)
-    }
-    __pyx_v_y = __Pyx_div_PY_LONG_LONG((__pyx_v_x + __Pyx_div_PY_LONG_LONG(__pyx_v_n, __pyx_v_x)), 2);
-  }
-
-  /* "cy_fermat_nogil.pyx":13
- *         x = y
- *         y = (x + n // x) // 2
- *     return x             # <<<<<<<<<<<<<<
- * 
- * cdef bint is_perfect_square_c(long long n) nogil:
- */
-  __pyx_r = __pyx_v_x;
-  goto __pyx_L0;
-
-  /* "cy_fermat_nogil.pyx":4
- * from libc.math cimport sqrt
- * 
- * cdef long long isqrt(long long n) nogil:             # <<<<<<<<<<<<<<
- *     cdef long long x, y
- *     if n == 0:
- */
-
-  /* function exit code */
-  __pyx_L1_error:;
-  #ifdef WITH_THREAD
-  __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-  #endif
-  __Pyx_AddTraceback("cy_fermat_nogil.isqrt", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  #ifdef WITH_THREAD
-  __Pyx_PyGILState_Release(__pyx_gilstate_save);
-  #endif
-  __pyx_L0:;
-  return __pyx_r;
-}
-
-/* "cy_fermat_nogil.pyx":15
- *     return x
- * 
- * cdef bint is_perfect_square_c(long long n) nogil:             # <<<<<<<<<<<<<<
- *     cdef long long root = isqrt(n)
- *     return root * root == n
- */
-
-static int __pyx_f_15cy_fermat_nogil_is_perfect_square_c(PY_LONG_LONG __pyx_v_n) {
-  PY_LONG_LONG __pyx_v_root;
-  int __pyx_r;
-  PY_LONG_LONG __pyx_t_1;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  #ifdef WITH_THREAD
-  PyGILState_STATE __pyx_gilstate_save;
-  #endif
-
-  /* "cy_fermat_nogil.pyx":16
- * 
- * cdef bint is_perfect_square_c(long long n) nogil:
- *     cdef long long root = isqrt(n)             # <<<<<<<<<<<<<<
- *     return root * root == n
- * 
- */
-  __pyx_t_1 = __pyx_f_15cy_fermat_nogil_isqrt(__pyx_v_n); if (unlikely(__pyx_t_1 == ((PY_LONG_LONG)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 16, __pyx_L1_error)
-  __pyx_v_root = __pyx_t_1;
-
-  /* "cy_fermat_nogil.pyx":17
- * cdef bint is_perfect_square_c(long long n) nogil:
- *     cdef long long root = isqrt(n)
- *     return root * root == n             # <<<<<<<<<<<<<<
- * 
- * cdef void fermat_factorization_c(long long N, long long* a, long long* b) nogil:
- */
-  __pyx_r = ((__pyx_v_root * __pyx_v_root) == __pyx_v_n);
-  goto __pyx_L0;
-
-  /* "cy_fermat_nogil.pyx":15
- *     return x
- * 
- * cdef bint is_perfect_square_c(long long n) nogil:             # <<<<<<<<<<<<<<
- *     cdef long long root = isqrt(n)
- *     return root * root == n
- */
-
-  /* function exit code */
-  __pyx_L1_error:;
-  #ifdef WITH_THREAD
-  __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-  #endif
-  __Pyx_AddTraceback("cy_fermat_nogil.is_perfect_square_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
-  #ifdef WITH_THREAD
-  __Pyx_PyGILState_Release(__pyx_gilstate_save);
-  #endif
-  __pyx_L0:;
-  return __pyx_r;
-}
-
-/* "cy_fermat_nogil.pyx":19
- *     return root * root == n
- * 
- * cdef void fermat_factorization_c(long long N, long long* a, long long* b) nogil:             # <<<<<<<<<<<<<<
- *     cdef long long x, y_squared, y
- *     if N % 2 == 0:
- */
-
-static void __pyx_f_15cy_fermat_nogil_fermat_factorization_c(PY_LONG_LONG __pyx_v_N, PY_LONG_LONG *__pyx_v_a, PY_LONG_LONG *__pyx_v_b) {
-  PY_LONG_LONG __pyx_v_x;
-  PY_LONG_LONG __pyx_v_y_squared;
-  PY_LONG_LONG __pyx_v_y;
-  int __pyx_t_1;
-  PY_LONG_LONG __pyx_t_2;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  #ifdef WITH_THREAD
-  PyGILState_STATE __pyx_gilstate_save;
-  #endif
-
-  /* "cy_fermat_nogil.pyx":21
- * cdef void fermat_factorization_c(long long N, long long* a, long long* b) nogil:
- *     cdef long long x, y_squared, y
- *     if N % 2 == 0:             # <<<<<<<<<<<<<<
- *         a[0] = 2
- *         b[0] = N // 2
- */
-  __pyx_t_1 = (__Pyx_mod_PY_LONG_LONG(__pyx_v_N, 2) == 0);
-  if (__pyx_t_1) {
-
-    /* "cy_fermat_nogil.pyx":22
- *     cdef long long x, y_squared, y
- *     if N % 2 == 0:
- *         a[0] = 2             # <<<<<<<<<<<<<<
- *         b[0] = N // 2
- *         return
- */
-    (__pyx_v_a[0]) = 2;
-
-    /* "cy_fermat_nogil.pyx":23
- *     if N % 2 == 0:
- *         a[0] = 2
- *         b[0] = N // 2             # <<<<<<<<<<<<<<
- *         return
- *     x = isqrt(N) + 1
- */
-    (__pyx_v_b[0]) = __Pyx_div_PY_LONG_LONG(__pyx_v_N, 2);
-
-    /* "cy_fermat_nogil.pyx":24
- *         a[0] = 2
- *         b[0] = N // 2
- *         return             # <<<<<<<<<<<<<<
- *     x = isqrt(N) + 1
- *     while True:
- */
-    goto __pyx_L0;
-
-    /* "cy_fermat_nogil.pyx":21
- * cdef void fermat_factorization_c(long long N, long long* a, long long* b) nogil:
- *     cdef long long x, y_squared, y
- *     if N % 2 == 0:             # <<<<<<<<<<<<<<
- *         a[0] = 2
- *         b[0] = N // 2
- */
-  }
-
-  /* "cy_fermat_nogil.pyx":25
- *         b[0] = N // 2
- *         return
- *     x = isqrt(N) + 1             # <<<<<<<<<<<<<<
- *     while True:
- *         y_squared = x * x - N
- */
-  __pyx_t_2 = __pyx_f_15cy_fermat_nogil_isqrt(__pyx_v_N); if (unlikely(__pyx_t_2 == ((PY_LONG_LONG)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 25, __pyx_L1_error)
-  __pyx_v_x = (__pyx_t_2 + 1);
-
-  /* "cy_fermat_nogil.pyx":26
- *         return
- *     x = isqrt(N) + 1
- *     while True:             # <<<<<<<<<<<<<<
- *         y_squared = x * x - N
- *         if is_perfect_square_c(y_squared):
- */
-  while (1) {
-
-    /* "cy_fermat_nogil.pyx":27
- *     x = isqrt(N) + 1
- *     while True:
- *         y_squared = x * x - N             # <<<<<<<<<<<<<<
- *         if is_perfect_square_c(y_squared):
- *             y = isqrt(y_squared)
- */
-    __pyx_v_y_squared = ((__pyx_v_x * __pyx_v_x) - __pyx_v_N);
-
-    /* "cy_fermat_nogil.pyx":28
- *     while True:
- *         y_squared = x * x - N
- *         if is_perfect_square_c(y_squared):             # <<<<<<<<<<<<<<
- *             y = isqrt(y_squared)
- *             a[0] = x - y
- */
-    __pyx_t_1 = __pyx_f_15cy_fermat_nogil_is_perfect_square_c(__pyx_v_y_squared); if (unlikely(__pyx_t_1 == ((int)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 28, __pyx_L1_error)
-    if (__pyx_t_1) {
-
-      /* "cy_fermat_nogil.pyx":29
- *         y_squared = x * x - N
- *         if is_perfect_square_c(y_squared):
- *             y = isqrt(y_squared)             # <<<<<<<<<<<<<<
- *             a[0] = x - y
- *             b[0] = x + y
- */
-      __pyx_t_2 = __pyx_f_15cy_fermat_nogil_isqrt(__pyx_v_y_squared); if (unlikely(__pyx_t_2 == ((PY_LONG_LONG)-1) && __Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 29, __pyx_L1_error)
-      __pyx_v_y = __pyx_t_2;
-
-      /* "cy_fermat_nogil.pyx":30
- *         if is_perfect_square_c(y_squared):
- *             y = isqrt(y_squared)
- *             a[0] = x - y             # <<<<<<<<<<<<<<
- *             b[0] = x + y
- *             return
- */
-      (__pyx_v_a[0]) = (__pyx_v_x - __pyx_v_y);
-
-      /* "cy_fermat_nogil.pyx":31
- *             y = isqrt(y_squared)
- *             a[0] = x - y
- *             b[0] = x + y             # <<<<<<<<<<<<<<
- *             return
- *         x += 1
- */
-      (__pyx_v_b[0]) = (__pyx_v_x + __pyx_v_y);
-
-      /* "cy_fermat_nogil.pyx":32
- *             a[0] = x - y
- *             b[0] = x + y
- *             return             # <<<<<<<<<<<<<<
- *         x += 1
- * 
- */
-      goto __pyx_L0;
-
-      /* "cy_fermat_nogil.pyx":28
- *     while True:
- *         y_squared = x * x - N
- *         if is_perfect_square_c(y_squared):             # <<<<<<<<<<<<<<
- *             y = isqrt(y_squared)
- *             a[0] = x - y
- */
-    }
-
-    /* "cy_fermat_nogil.pyx":33
- *             b[0] = x + y
- *             return
- *         x += 1             # <<<<<<<<<<<<<<
- * 
- * cpdef tuple fermat_factorization_nogil(long long N):
- */
-    __pyx_v_x = (__pyx_v_x + 1);
-  }
-
-  /* "cy_fermat_nogil.pyx":19
- *     return root * root == n
- * 
- * cdef void fermat_factorization_c(long long N, long long* a, long long* b) nogil:             # <<<<<<<<<<<<<<
- *     cdef long long x, y_squared, y
- *     if N % 2 == 0:
- */
-
-  /* function exit code */
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  #ifdef WITH_THREAD
-  __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
-  #endif
-  __Pyx_AddTraceback("cy_fermat_nogil.fermat_factorization_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  #ifdef WITH_THREAD
-  __Pyx_PyGILState_Release(__pyx_gilstate_save);
-  #endif
-  __pyx_L0:;
-}
-
-/* "cy_fermat_nogil.pyx":35
- *         x += 1
- * 
- * cpdef tuple fermat_factorization_nogil(long long N):             # <<<<<<<<<<<<<<
- *     cdef long long a = 0
- *     cdef long long b = 0
- */
-
-static PyObject *__pyx_pw_15cy_fermat_nogil_1fermat_factorization_nogil(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_10ferma_fact_1is_perfect_square(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyObject *__pyx_f_15cy_fermat_nogil_fermat_factorization_nogil(PY_LONG_LONG __pyx_v_N, CYTHON_UNUSED int __pyx_skip_dispatch) {
-  PY_LONG_LONG __pyx_v_a;
-  PY_LONG_LONG __pyx_v_b;
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  PyObject *__pyx_t_3 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("fermat_factorization_nogil", 1);
+static int __pyx_f_10ferma_fact_is_perfect_square(PY_LONG_LONG __pyx_v_n, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  PY_LONG_LONG __pyx_v_root;
+  int __pyx_r;
 
-  /* "cy_fermat_nogil.pyx":36
+  /* "ferma_fact.pyx":8
+ * cpdef bint is_perfect_square(long long n):
+ *     """,     ."""
+ *     cdef long long root = <long long>floor(sqrt(n))             # <<<<<<<<<<<<<<
+ *     return root * root == n
  * 
- * cpdef tuple fermat_factorization_nogil(long long N):
- *     cdef long long a = 0             # <<<<<<<<<<<<<<
- *     cdef long long b = 0
- *     with nogil:
  */
-  __pyx_v_a = 0;
+  __pyx_v_root = ((PY_LONG_LONG)floor(sqrt(__pyx_v_n)));
 
-  /* "cy_fermat_nogil.pyx":37
- * cpdef tuple fermat_factorization_nogil(long long N):
- *     cdef long long a = 0
- *     cdef long long b = 0             # <<<<<<<<<<<<<<
- *     with nogil:
- *         fermat_factorization_c(N, &a, &b)
+  /* "ferma_fact.pyx":9
+ *     """,     ."""
+ *     cdef long long root = <long long>floor(sqrt(n))
+ *     return root * root == n             # <<<<<<<<<<<<<<
+ * 
+ * @cython.boundscheck(False)
  */
-  __pyx_v_b = 0;
-
-  /* "cy_fermat_nogil.pyx":38
- *     cdef long long a = 0
- *     cdef long long b = 0
- *     with nogil:             # <<<<<<<<<<<<<<
- *         fermat_factorization_c(N, &a, &b)
- *     return (a, b)
- */
-  {
-      #ifdef WITH_THREAD
-      PyThreadState *_save;
-      _save = NULL;
-      Py_UNBLOCK_THREADS
-      __Pyx_FastGIL_Remember();
-      #endif
-      /*try:*/ {
-
-        /* "cy_fermat_nogil.pyx":39
- *     cdef long long b = 0
- *     with nogil:
- *         fermat_factorization_c(N, &a, &b)             # <<<<<<<<<<<<<<
- *     return (a, b)
- */
-        __pyx_f_15cy_fermat_nogil_fermat_factorization_c(__pyx_v_N, (&__pyx_v_a), (&__pyx_v_b)); if (unlikely(__Pyx_ErrOccurredWithGIL())) __PYX_ERR(0, 39, __pyx_L4_error)
-      }
-
-      /* "cy_fermat_nogil.pyx":38
- *     cdef long long a = 0
- *     cdef long long b = 0
- *     with nogil:             # <<<<<<<<<<<<<<
- *         fermat_factorization_c(N, &a, &b)
- *     return (a, b)
- */
-      /*finally:*/ {
-        /*normal exit:*/{
-          #ifdef WITH_THREAD
-          __Pyx_FastGIL_Forget();
-          Py_BLOCK_THREADS
-          #endif
-          goto __pyx_L5;
-        }
-        __pyx_L4_error: {
-          #ifdef WITH_THREAD
-          __Pyx_FastGIL_Forget();
-          Py_BLOCK_THREADS
-          #endif
-          goto __pyx_L1_error;
-        }
-        __pyx_L5:;
-      }
-  }
-
-  /* "cy_fermat_nogil.pyx":40
- *     with nogil:
- *         fermat_factorization_c(N, &a, &b)
- *     return (a, b)             # <<<<<<<<<<<<<<
- */
-  __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_PY_LONG_LONG(__pyx_v_a); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyInt_From_PY_LONG_LONG(__pyx_v_b); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 40, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 40, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error);
-  __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_2)) __PYX_ERR(0, 40, __pyx_L1_error);
-  __pyx_t_1 = 0;
-  __pyx_t_2 = 0;
-  __pyx_r = ((PyObject*)__pyx_t_3);
-  __pyx_t_3 = 0;
+  __pyx_r = ((__pyx_v_root * __pyx_v_root) == __pyx_v_n);
   goto __pyx_L0;
 
-  /* "cy_fermat_nogil.pyx":35
- *         x += 1
- * 
- * cpdef tuple fermat_factorization_nogil(long long N):             # <<<<<<<<<<<<<<
- *     cdef long long a = 0
- *     cdef long long b = 0
+  /* "ferma_fact.pyx":6
+ * @cython.boundscheck(False)
+ * @cython.wraparound(False)
+ * cpdef bint is_perfect_square(long long n):             # <<<<<<<<<<<<<<
+ *     """,     ."""
+ *     cdef long long root = <long long>floor(sqrt(n))
  */
 
   /* function exit code */
+  __pyx_L0:;
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10ferma_fact_1is_perfect_square(PyObject *__pyx_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+PyDoc_STRVAR(__pyx_doc_10ferma_fact_is_perfect_square, "\320\237\321\200\320\276\320\262\320\265\321\200\321\217\320\265\321\202, \321\217\320\262\320\273\321\217\320\265\321\202\321\201\321\217 \320\273\320\270 \321\207\320\270\321\201\320\273\320\276 \320\277\320\276\320\273\320\275\321\213\320\274 \320\272\320\262\320\260\320\264\321\200\320\260\321\202\320\276\320\274.");
+static PyMethodDef __pyx_mdef_10ferma_fact_1is_perfect_square = {"is_perfect_square", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_10ferma_fact_1is_perfect_square, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_10ferma_fact_is_perfect_square};
+static PyObject *__pyx_pw_10ferma_fact_1is_perfect_square(PyObject *__pyx_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  PY_LONG_LONG __pyx_v_n;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[1] = {0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("is_perfect_square (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_n,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_n)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 6, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "is_perfect_square") < 0)) __PYX_ERR(0, 6, __pyx_L3_error)
+      }
+    } else if (unlikely(__pyx_nargs != 1)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+    }
+    __pyx_v_n = __Pyx_PyInt_As_PY_LONG_LONG(values[0]); if (unlikely((__pyx_v_n == (PY_LONG_LONG)-1) && PyErr_Occurred())) __PYX_ERR(0, 6, __pyx_L3_error)
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("is_perfect_square", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 6, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("ferma_fact.is_perfect_square", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_10ferma_fact_is_perfect_square(__pyx_self, __pyx_v_n);
+
+  /* function exit code */
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10ferma_fact_is_perfect_square(CYTHON_UNUSED PyObject *__pyx_self, PY_LONG_LONG __pyx_v_n) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  int __pyx_t_1;
+  PyObject *__pyx_t_2 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("is_perfect_square", 1);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_f_10ferma_fact_is_perfect_square(__pyx_v_n, 0); if (unlikely(__pyx_t_1 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 6, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBool_FromLong(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 6, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_r = __pyx_t_2;
+  __pyx_t_2 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
   __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_AddTraceback("ferma_fact.is_perfect_square", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "ferma_fact.pyx":13
+ * @cython.boundscheck(False)
+ * @cython.wraparound(False)
+ * cpdef tuple fermat_factorization(long long N):             # <<<<<<<<<<<<<<
+ *     """  N    ."""
+ *     if N % 2 == 0:
+ */
+
+static PyObject *__pyx_pw_10ferma_fact_3fermat_factorization(PyObject *__pyx_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+static PyObject *__pyx_f_10ferma_fact_fermat_factorization(PY_LONG_LONG __pyx_v_N, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  PY_LONG_LONG __pyx_v_x;
+  PY_LONG_LONG __pyx_v_y_squared;
+  PY_LONG_LONG __pyx_v_y;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  int __pyx_t_1;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("fermat_factorization", 1);
+
+  /* "ferma_fact.pyx":15
+ * cpdef tuple fermat_factorization(long long N):
+ *     """  N    ."""
+ *     if N % 2 == 0:             # <<<<<<<<<<<<<<
+ *         return 2, N // 2  #  N ,   2
+ * 
+ */
+  __pyx_t_1 = (__Pyx_mod_PY_LONG_LONG(__pyx_v_N, 2) == 0);
+  if (__pyx_t_1) {
+
+    /* "ferma_fact.pyx":16
+ *     """  N    ."""
+ *     if N % 2 == 0:
+ *         return 2, N // 2  #  N ,   2             # <<<<<<<<<<<<<<
+ * 
+ *     cdef long long x = <long long>floor(sqrt(N)) + 1  #       N
+ */
+    __Pyx_XDECREF(__pyx_r);
+    __pyx_t_2 = __Pyx_PyInt_From_PY_LONG_LONG(__Pyx_div_PY_LONG_LONG(__pyx_v_N, 2)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 16, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 16, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_INCREF(__pyx_int_2);
+    __Pyx_GIVEREF(__pyx_int_2);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_int_2)) __PYX_ERR(0, 16, __pyx_L1_error);
+    __Pyx_GIVEREF(__pyx_t_2);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_2)) __PYX_ERR(0, 16, __pyx_L1_error);
+    __pyx_t_2 = 0;
+    __pyx_r = ((PyObject*)__pyx_t_3);
+    __pyx_t_3 = 0;
+    goto __pyx_L0;
+
+    /* "ferma_fact.pyx":15
+ * cpdef tuple fermat_factorization(long long N):
+ *     """  N    ."""
+ *     if N % 2 == 0:             # <<<<<<<<<<<<<<
+ *         return 2, N // 2  #  N ,   2
+ * 
+ */
+  }
+
+  /* "ferma_fact.pyx":18
+ *         return 2, N // 2  #  N ,   2
+ * 
+ *     cdef long long x = <long long>floor(sqrt(N)) + 1  #       N             # <<<<<<<<<<<<<<
+ *     cdef long long y_squared
+ *     cdef long long y
+ */
+  __pyx_v_x = (((PY_LONG_LONG)floor(sqrt(__pyx_v_N))) + 1);
+
+  /* "ferma_fact.pyx":22
+ *     cdef long long y
+ * 
+ *     while True:             # <<<<<<<<<<<<<<
+ *         y_squared = x * x - N
+ *         if is_perfect_square(y_squared):
+ */
+  while (1) {
+
+    /* "ferma_fact.pyx":23
+ * 
+ *     while True:
+ *         y_squared = x * x - N             # <<<<<<<<<<<<<<
+ *         if is_perfect_square(y_squared):
+ *             y = <long long>floor(sqrt(y_squared))
+ */
+    __pyx_v_y_squared = ((__pyx_v_x * __pyx_v_x) - __pyx_v_N);
+
+    /* "ferma_fact.pyx":24
+ *     while True:
+ *         y_squared = x * x - N
+ *         if is_perfect_square(y_squared):             # <<<<<<<<<<<<<<
+ *             y = <long long>floor(sqrt(y_squared))
+ *             return (x - y, x + y)  #
+ */
+    __pyx_t_1 = __pyx_f_10ferma_fact_is_perfect_square(__pyx_v_y_squared, 0); if (unlikely(__pyx_t_1 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 24, __pyx_L1_error)
+    if (__pyx_t_1) {
+
+      /* "ferma_fact.pyx":25
+ *         y_squared = x * x - N
+ *         if is_perfect_square(y_squared):
+ *             y = <long long>floor(sqrt(y_squared))             # <<<<<<<<<<<<<<
+ *             return (x - y, x + y)  #
+ *         x += 1  #  x
+ */
+      __pyx_v_y = ((PY_LONG_LONG)floor(sqrt(__pyx_v_y_squared)));
+
+      /* "ferma_fact.pyx":26
+ *         if is_perfect_square(y_squared):
+ *             y = <long long>floor(sqrt(y_squared))
+ *             return (x - y, x + y)  #             # <<<<<<<<<<<<<<
+ *         x += 1  #  x
+ */
+      __Pyx_XDECREF(__pyx_r);
+      __pyx_t_3 = __Pyx_PyInt_From_PY_LONG_LONG((__pyx_v_x - __pyx_v_y)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 26, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_2 = __Pyx_PyInt_From_PY_LONG_LONG((__pyx_v_x + __pyx_v_y)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 26, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 26, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_GIVEREF(__pyx_t_3);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3)) __PYX_ERR(0, 26, __pyx_L1_error);
+      __Pyx_GIVEREF(__pyx_t_2);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_2)) __PYX_ERR(0, 26, __pyx_L1_error);
+      __pyx_t_3 = 0;
+      __pyx_t_2 = 0;
+      __pyx_r = ((PyObject*)__pyx_t_4);
+      __pyx_t_4 = 0;
+      goto __pyx_L0;
+
+      /* "ferma_fact.pyx":24
+ *     while True:
+ *         y_squared = x * x - N
+ *         if is_perfect_square(y_squared):             # <<<<<<<<<<<<<<
+ *             y = <long long>floor(sqrt(y_squared))
+ *             return (x - y, x + y)  #
+ */
+    }
+
+    /* "ferma_fact.pyx":27
+ *             y = <long long>floor(sqrt(y_squared))
+ *             return (x - y, x + y)  #
+ *         x += 1  #  x             # <<<<<<<<<<<<<<
+ */
+    __pyx_v_x = (__pyx_v_x + 1);
+  }
+
+  /* "ferma_fact.pyx":13
+ * @cython.boundscheck(False)
+ * @cython.wraparound(False)
+ * cpdef tuple fermat_factorization(long long N):             # <<<<<<<<<<<<<<
+ *     """  N    ."""
+ *     if N % 2 == 0:
+ */
+
+  /* function exit code */
+  __pyx_r = ((PyObject*)Py_None); __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
+  __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("cy_fermat_nogil.fermat_factorization_nogil", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_AddTraceback("ferma_fact.fermat_factorization", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2736,15 +2573,16 @@ static PyObject *__pyx_f_15cy_fermat_nogil_fermat_factorization_nogil(PY_LONG_LO
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_15cy_fermat_nogil_1fermat_factorization_nogil(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_10ferma_fact_3fermat_factorization(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_15cy_fermat_nogil_1fermat_factorization_nogil = {"fermat_factorization_nogil", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_15cy_fermat_nogil_1fermat_factorization_nogil, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_15cy_fermat_nogil_1fermat_factorization_nogil(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_10ferma_fact_2fermat_factorization, "\320\240\320\260\320\267\320\273\320\276\320\266\320\265\320\275\320\270\320\265 \321\207\320\270\321\201\320\273\320\260 N \320\275\320\260 \320\274\320\275\320\276\320\266\320\270\321\202\320\265\320\273\320\270 \320\274\320\265\321\202\320\276\320\264\320\276\320\274 \320\244\320\265\321\200\320\274\320\260.");
+static PyMethodDef __pyx_mdef_10ferma_fact_3fermat_factorization = {"fermat_factorization", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_10ferma_fact_3fermat_factorization, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_10ferma_fact_2fermat_factorization};
+static PyObject *__pyx_pw_10ferma_fact_3fermat_factorization(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -2762,7 +2600,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   int __pyx_clineno = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("fermat_factorization_nogil (wrapper)", 0);
+  __Pyx_RefNannySetupContext("fermat_factorization (wrapper)", 0);
   #if !CYTHON_METH_FASTCALL
   #if CYTHON_ASSUME_SAFE_MACROS
   __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
@@ -2788,23 +2626,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 35, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 13, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "fermat_factorization_nogil") < 0)) __PYX_ERR(0, 35, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "fermat_factorization") < 0)) __PYX_ERR(0, 13, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_N = __Pyx_PyInt_As_PY_LONG_LONG(values[0]); if (unlikely((__pyx_v_N == (PY_LONG_LONG)-1) && PyErr_Occurred())) __PYX_ERR(0, 35, __pyx_L3_error)
+    __pyx_v_N = __Pyx_PyInt_As_PY_LONG_LONG(values[0]); if (unlikely((__pyx_v_N == (PY_LONG_LONG)-1) && PyErr_Occurred())) __PYX_ERR(0, 13, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("fermat_factorization_nogil", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 35, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("fermat_factorization", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 13, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2814,11 +2652,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("cy_fermat_nogil.fermat_factorization_nogil", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ferma_fact.fermat_factorization", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_15cy_fermat_nogil_fermat_factorization_nogil(__pyx_self, __pyx_v_N);
+  __pyx_r = __pyx_pf_10ferma_fact_2fermat_factorization(__pyx_self, __pyx_v_N);
 
   /* function exit code */
   {
@@ -2831,16 +2669,16 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_15cy_fermat_nogil_fermat_factorization_nogil(CYTHON_UNUSED PyObject *__pyx_self, PY_LONG_LONG __pyx_v_N) {
+static PyObject *__pyx_pf_10ferma_fact_2fermat_factorization(CYTHON_UNUSED PyObject *__pyx_self, PY_LONG_LONG __pyx_v_N) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("fermat_factorization_nogil", 1);
+  __Pyx_RefNannySetupContext("fermat_factorization", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_15cy_fermat_nogil_fermat_factorization_nogil(__pyx_v_N, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_10ferma_fact_fermat_factorization(__pyx_v_N, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2849,7 +2687,7 @@ static PyObject *__pyx_pf_15cy_fermat_nogil_fermat_factorization_nogil(CYTHON_UN
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("cy_fermat_nogil.fermat_factorization_nogil", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ferma_fact.fermat_factorization", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2874,14 +2712,16 @@ static PyMethodDef __pyx_methods[] = {
 static int __Pyx_CreateStringTabAndInitStrings(void) {
   __Pyx_StringTabEntry __pyx_string_tab[] = {
     {&__pyx_n_s_N, __pyx_k_N, sizeof(__pyx_k_N), 0, 0, 1, 1},
-    {&__pyx_n_s__3, __pyx_k__3, sizeof(__pyx_k__3), 0, 0, 1, 1},
+    {&__pyx_n_s__5, __pyx_k__5, sizeof(__pyx_k__5), 0, 0, 1, 1},
     {&__pyx_n_s_asyncio_coroutines, __pyx_k_asyncio_coroutines, sizeof(__pyx_k_asyncio_coroutines), 0, 0, 1, 1},
     {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
-    {&__pyx_n_s_cy_fermat_nogil, __pyx_k_cy_fermat_nogil, sizeof(__pyx_k_cy_fermat_nogil), 0, 0, 1, 1},
-    {&__pyx_kp_s_cy_fermat_nogil_pyx, __pyx_k_cy_fermat_nogil_pyx, sizeof(__pyx_k_cy_fermat_nogil_pyx), 0, 0, 1, 0},
-    {&__pyx_n_s_fermat_factorization_nogil, __pyx_k_fermat_factorization_nogil, sizeof(__pyx_k_fermat_factorization_nogil), 0, 0, 1, 1},
+    {&__pyx_n_s_ferma_fact, __pyx_k_ferma_fact, sizeof(__pyx_k_ferma_fact), 0, 0, 1, 1},
+    {&__pyx_kp_s_ferma_fact_pyx, __pyx_k_ferma_fact_pyx, sizeof(__pyx_k_ferma_fact_pyx), 0, 0, 1, 0},
+    {&__pyx_n_s_fermat_factorization, __pyx_k_fermat_factorization, sizeof(__pyx_k_fermat_factorization), 0, 0, 1, 1},
     {&__pyx_n_s_is_coroutine, __pyx_k_is_coroutine, sizeof(__pyx_k_is_coroutine), 0, 0, 1, 1},
+    {&__pyx_n_s_is_perfect_square, __pyx_k_is_perfect_square, sizeof(__pyx_k_is_perfect_square), 0, 0, 1, 1},
     {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
+    {&__pyx_n_s_n, __pyx_k_n, sizeof(__pyx_k_n), 0, 0, 1, 1},
     {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
     {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
     {0, 0, 0, 0, 0, 0, 0}
@@ -2898,17 +2738,29 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "cy_fermat_nogil.pyx":35
- *         x += 1
- * 
- * cpdef tuple fermat_factorization_nogil(long long N):             # <<<<<<<<<<<<<<
- *     cdef long long a = 0
- *     cdef long long b = 0
+  /* "ferma_fact.pyx":6
+ * @cython.boundscheck(False)
+ * @cython.wraparound(False)
+ * cpdef bint is_perfect_square(long long n):             # <<<<<<<<<<<<<<
+ *     """,     ."""
+ *     cdef long long root = <long long>floor(sqrt(n))
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_n_s_N); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(1, __pyx_n_s_n); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
-  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cy_fermat_nogil_pyx, __pyx_n_s_fermat_factorization_nogil, 35, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_ferma_fact_pyx, __pyx_n_s_is_perfect_square, 6, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 6, __pyx_L1_error)
+
+  /* "ferma_fact.pyx":13
+ * @cython.boundscheck(False)
+ * @cython.wraparound(False)
+ * cpdef tuple fermat_factorization(long long N):             # <<<<<<<<<<<<<<
+ *     """  N    ."""
+ *     if N % 2 == 0:
+ */
+  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_n_s_N); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__3);
+  __Pyx_GIVEREF(__pyx_tuple__3);
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_ferma_fact_pyx, __pyx_n_s_fermat_factorization, 13, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -2919,6 +2771,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 
 static CYTHON_SMALL_CODE int __Pyx_InitConstants(void) {
   if (__Pyx_CreateStringTabAndInitStrings() < 0) __PYX_ERR(0, 1, __pyx_L1_error);
+  __pyx_int_2 = PyInt_FromLong(2); if (unlikely(!__pyx_int_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -2998,10 +2851,10 @@ static int __Pyx_modinit_function_import_code(void) {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_cy_fermat_nogil(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_ferma_fact(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_cy_fermat_nogil},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_ferma_fact},
   {0, NULL}
 };
 #endif
@@ -3014,7 +2867,7 @@ namespace {
   #endif
   {
       PyModuleDef_HEAD_INIT,
-      "cy_fermat_nogil",
+      "ferma_fact",
       0, /* m_doc */
     #if CYTHON_PEP489_MULTI_PHASE_INIT
       0, /* m_size */
@@ -3062,11 +2915,11 @@ namespace {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initcy_fermat_nogil(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initcy_fermat_nogil(void)
+__Pyx_PyMODINIT_FUNC initferma_fact(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initferma_fact(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_cy_fermat_nogil(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_cy_fermat_nogil(void)
+__Pyx_PyMODINIT_FUNC PyInit_ferma_fact(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_ferma_fact(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -3147,7 +3000,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_cy_fermat_nogil(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_ferma_fact(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -3164,7 +3017,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_cy_fermat_nogil(PyObject *__pyx_py
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'cy_fermat_nogil' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'ferma_fact' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -3176,13 +3029,13 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_cy_fermat_nogil(PyObject *__pyx_py
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("cy_fermat_nogil", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("ferma_fact", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   if (unlikely(!__pyx_m)) __PYX_ERR(0, 1, __pyx_L1_error)
   #elif CYTHON_USE_MODULE_STATE
   __pyx_t_1 = PyModule_Create(&__pyx_moduledef); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   {
     int add_module_result = PyState_AddModule(__pyx_t_1, &__pyx_moduledef);
-    __pyx_t_1 = 0; /* transfer ownership from __pyx_t_1 to "cy_fermat_nogil" pseudovariable */
+    __pyx_t_1 = 0; /* transfer ownership from __pyx_t_1 to "ferma_fact" pseudovariable */
     if (unlikely((add_module_result < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     pystate_addmodule_run = 1;
   }
@@ -3206,7 +3059,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_cy_fermat_nogil(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_ferma_fact(void)", 0);
   if (__Pyx_check_binary_version(__PYX_LIMITED_VERSION_HEX, __Pyx_get_runtime_version(), CYTHON_COMPILING_IN_LIMITED_API) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -3244,14 +3097,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_cy_fermat_nogil) {
+  if (__pyx_module_is_main_ferma_fact) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "cy_fermat_nogil")) {
-      if (unlikely((PyDict_SetItemString(modules, "cy_fermat_nogil", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "ferma_fact")) {
+      if (unlikely((PyDict_SetItemString(modules, "ferma_fact", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -3272,21 +3125,33 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "cy_fermat_nogil.pyx":35
- *         x += 1
- * 
- * cpdef tuple fermat_factorization_nogil(long long N):             # <<<<<<<<<<<<<<
- *     cdef long long a = 0
- *     cdef long long b = 0
+  /* "ferma_fact.pyx":6
+ * @cython.boundscheck(False)
+ * @cython.wraparound(False)
+ * cpdef bint is_perfect_square(long long n):             # <<<<<<<<<<<<<<
+ *     """,     ."""
+ *     cdef long long root = <long long>floor(sqrt(n))
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_15cy_fermat_nogil_1fermat_factorization_nogil, 0, __pyx_n_s_fermat_factorization_nogil, NULL, __pyx_n_s_cy_fermat_nogil, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_10ferma_fact_1is_perfect_square, 0, __pyx_n_s_is_perfect_square, NULL, __pyx_n_s_ferma_fact, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fermat_factorization_nogil, __pyx_t_2) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_is_perfect_square, __pyx_t_2) < 0) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "cy_fermat_nogil.pyx":1
- * # cy_fermat_nogil.pyx             # <<<<<<<<<<<<<<
- * from libc.math cimport sqrt
+  /* "ferma_fact.pyx":13
+ * @cython.boundscheck(False)
+ * @cython.wraparound(False)
+ * cpdef tuple fermat_factorization(long long N):             # <<<<<<<<<<<<<<
+ *     """  N    ."""
+ *     if N % 2 == 0:
+ */
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_10ferma_fact_3fermat_factorization, 0, __pyx_n_s_fermat_factorization, NULL, __pyx_n_s_ferma_fact, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fermat_factorization, __pyx_t_2) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+  /* "ferma_fact.pyx":1
+ * import cython             # <<<<<<<<<<<<<<
+ * from libc.math cimport sqrt, floor
  * 
  */
   __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -3301,7 +3166,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d && stringtab_initialized) {
-      __Pyx_AddTraceback("init cy_fermat_nogil", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init ferma_fact", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     #if !CYTHON_USE_MODULE_STATE
     Py_CLEAR(__pyx_m);
@@ -3315,7 +3180,7 @@ if (!__Pyx_RefNanny) {
     }
     #endif
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init cy_fermat_nogil");
+    PyErr_SetString(PyExc_ImportError, "init ferma_fact");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -3361,34 +3226,6 @@ end:
     return (__Pyx_RefNannyAPIStruct *)r;
 }
 #endif
-
-/* DivInt[PY_LONG_LONG] */
-static CYTHON_INLINE PY_LONG_LONG __Pyx_div_PY_LONG_LONG(PY_LONG_LONG a, PY_LONG_LONG b) {
-    PY_LONG_LONG q = a / b;
-    PY_LONG_LONG r = a - q*b;
-    q -= ((r != 0) & ((r ^ b) < 0));
-    return q;
-}
-
-/* ErrOccurredWithGIL */
-static CYTHON_INLINE int __Pyx_ErrOccurredWithGIL(void) {
-  int err;
-  #ifdef WITH_THREAD
-  PyGILState_STATE _save = PyGILState_Ensure();
-  #endif
-  err = !!PyErr_Occurred();
-  #ifdef WITH_THREAD
-  PyGILState_Release(_save);
-  #endif
-  return err;
-}
-
-/* ModInt[PY_LONG_LONG] */
-static CYTHON_INLINE PY_LONG_LONG __Pyx_mod_PY_LONG_LONG(PY_LONG_LONG a, PY_LONG_LONG b) {
-    PY_LONG_LONG r = a % b;
-    r += ((r != 0) & ((r ^ b) < 0)) * b;
-    return r;
-}
 
 /* TupleAndListFromArray */
 #if CYTHON_COMPILING_IN_CPYTHON
@@ -3809,6 +3646,21 @@ static void __Pyx_RaiseArgtupleInvalid(
                  "%.200s() takes %.8s %" CYTHON_FORMAT_SSIZE_T "d positional argument%.1s (%" CYTHON_FORMAT_SSIZE_T "d given)",
                  func_name, more_or_less, num_expected,
                  (num_expected == 1) ? "" : "s", num_found);
+}
+
+/* ModInt[PY_LONG_LONG] */
+static CYTHON_INLINE PY_LONG_LONG __Pyx_mod_PY_LONG_LONG(PY_LONG_LONG a, PY_LONG_LONG b) {
+    PY_LONG_LONG r = a % b;
+    r += ((r != 0) & ((r ^ b) < 0)) * b;
+    return r;
+}
+
+/* DivInt[PY_LONG_LONG] */
+static CYTHON_INLINE PY_LONG_LONG __Pyx_div_PY_LONG_LONG(PY_LONG_LONG a, PY_LONG_LONG b) {
+    PY_LONG_LONG q = a / b;
+    PY_LONG_LONG r = a - q*b;
+    q -= ((r != 0) & ((r ^ b) < 0));
+    return q;
 }
 
 /* FixUpExtensionType */
@@ -5922,7 +5774,7 @@ __Pyx_PyType_GetName(PyTypeObject* tp)
     if (unlikely(name == NULL) || unlikely(!PyUnicode_Check(name))) {
         PyErr_Clear();
         Py_XDECREF(name);
-        name = __Pyx_NewRef(__pyx_n_s__3);
+        name = __Pyx_NewRef(__pyx_n_s__5);
     }
     return name;
 }

@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Cython: cy_fermat.pyx</title>
+    <title>Cython: ferma_fact.pyx</title>
     <style type="text/css">
     
 body.cython { font-family: courier; font-size: 12; }
@@ -286,6 +286,81 @@ body.cython { font-family: courier; font-size: 12; }
 .cython.score-252 {background-color: #FFFF09;}
 .cython.score-253 {background-color: #FFFF09;}
 .cython.score-254 {background-color: #FFFF09;}
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.cython .hll { background-color: #ffffcc }
+.cython { background: #f8f8f8; }
+.cython .c { color: #3D7B7B; font-style: italic } /* Comment */
+.cython .err { border: 1px solid #F00 } /* Error */
+.cython .k { color: #008000; font-weight: bold } /* Keyword */
+.cython .o { color: #666 } /* Operator */
+.cython .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.cython .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.cython .cp { color: #9C6500 } /* Comment.Preproc */
+.cython .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.cython .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.cython .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.cython .gd { color: #A00000 } /* Generic.Deleted */
+.cython .ge { font-style: italic } /* Generic.Emph */
+.cython .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.cython .gr { color: #E40000 } /* Generic.Error */
+.cython .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.cython .gi { color: #008400 } /* Generic.Inserted */
+.cython .go { color: #717171 } /* Generic.Output */
+.cython .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.cython .gs { font-weight: bold } /* Generic.Strong */
+.cython .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.cython .gt { color: #04D } /* Generic.Traceback */
+.cython .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.cython .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.cython .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.cython .kp { color: #008000 } /* Keyword.Pseudo */
+.cython .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.cython .kt { color: #B00040 } /* Keyword.Type */
+.cython .m { color: #666 } /* Literal.Number */
+.cython .s { color: #BA2121 } /* Literal.String */
+.cython .na { color: #687822 } /* Name.Attribute */
+.cython .nb { color: #008000 } /* Name.Builtin */
+.cython .nc { color: #00F; font-weight: bold } /* Name.Class */
+.cython .no { color: #800 } /* Name.Constant */
+.cython .nd { color: #A2F } /* Name.Decorator */
+.cython .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.cython .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.cython .nf { color: #00F } /* Name.Function */
+.cython .nl { color: #767600 } /* Name.Label */
+.cython .nn { color: #00F; font-weight: bold } /* Name.Namespace */
+.cython .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.cython .nv { color: #19177C } /* Name.Variable */
+.cython .ow { color: #A2F; font-weight: bold } /* Operator.Word */
+.cython .w { color: #BBB } /* Text.Whitespace */
+.cython .mb { color: #666 } /* Literal.Number.Bin */
+.cython .mf { color: #666 } /* Literal.Number.Float */
+.cython .mh { color: #666 } /* Literal.Number.Hex */
+.cython .mi { color: #666 } /* Literal.Number.Integer */
+.cython .mo { color: #666 } /* Literal.Number.Oct */
+.cython .sa { color: #BA2121 } /* Literal.String.Affix */
+.cython .sb { color: #BA2121 } /* Literal.String.Backtick */
+.cython .sc { color: #BA2121 } /* Literal.String.Char */
+.cython .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.cython .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.cython .s2 { color: #BA2121 } /* Literal.String.Double */
+.cython .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.cython .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.cython .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.cython .sx { color: #008000 } /* Literal.String.Other */
+.cython .sr { color: #A45A77 } /* Literal.String.Regex */
+.cython .s1 { color: #BA2121 } /* Literal.String.Single */
+.cython .ss { color: #19177C } /* Literal.String.Symbol */
+.cython .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.cython .fm { color: #00F } /* Name.Function.Magic */
+.cython .vc { color: #19177C } /* Name.Variable.Class */
+.cython .vg { color: #19177C } /* Name.Variable.Global */
+.cython .vi { color: #19177C } /* Name.Variable.Instance */
+.cython .vm { color: #19177C } /* Name.Variable.Magic */
+.cython .il { color: #666 } /* Literal.Number.Integer.Long */
     </style>
 </head>
 <body class="cython">
@@ -294,59 +369,44 @@ body.cython { font-family: courier; font-size: 12; }
     <span style="background-color: #FFFF00">Yellow lines</span> hint at Python interaction.<br />
     Click on a line that starts with a "<code>+</code>" to see the C code that Cython generated for it.
 </p>
-<p>Raw output: <a href="cy_fermat.c">cy_fermat.c</a></p>
-<div class="cython"><pre class="cython line score-8" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">01</span>: from libc.math cimport sqrt</pre>
+<p>Raw output: <a href="ferma_fact.c">ferma_fact.c</a></p>
+<div class="cython"><pre class="cython line score-8" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">01</span>: <span class="k">import</span><span class="w"> </span><span class="nn">cython</span></pre>
 <pre class='cython code score-8 '>  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyDict_NewPresized</span>(0);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
   if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_d, __pyx_n_s_test, __pyx_t_2) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 1, __pyx_L1_error)</span>
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">02</span>: </pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">02</span>: <span class="k">from</span><span class="w"> </span><span class="nn">libc.math</span><span class="w"> </span><span class="k">cimport</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">floor</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">03</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">04</span>: cdef extern from "math.h":</pre>
-<pre class="cython line score-0">&#xA0;<span class="">05</span>:     double floor(double x)</pre>
-<pre class="cython line score-0">&#xA0;<span class="">06</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">07</span>: cdef int isqrt(long long n):</pre>
-<pre class='cython code score-0 '>static int __pyx_f_9cy_fermat_isqrt(PY_LONG_LONG __pyx_v_n) {
-  int __pyx_r;
-/* … */
-  /* function exit code */
-  __pyx_L0:;
-  return __pyx_r;
-}
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">08</span>:     return &lt;int&gt;sqrt(n)</pre>
-<pre class='cython code score-0 '>  __pyx_r = ((int)sqrt(__pyx_v_n));
-  goto __pyx_L0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">09</span>: </pre>
-<pre class="cython line score-68" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">10</span>: cpdef bint is_perfect_square(long long n):</pre>
-<pre class='cython code score-68 '>static PyObject *__pyx_pw_9cy_fermat_1is_perfect_square(PyObject *__pyx_self, 
+<pre class="cython line score-0">&#xA0;<span class="">04</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">boundscheck</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">05</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">wraparound</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
+<pre class="cython line score-67" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">06</span>: <span class="k">cpdef</span><span class="w"> </span><span class="kt">bint</span> <span class="nf">is_perfect_square</span><span class="p">(</span><span class="nb">long</span> <span class="nb">long</span> <span class="n">n</span><span class="p">):</span></pre>
+<pre class='cython code score-67 '>static PyObject *__pyx_pw_10ferma_fact_1is_perfect_square(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static int __pyx_f_9cy_fermat_is_perfect_square(PY_LONG_LONG __pyx_v_n, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static int __pyx_f_10ferma_fact_is_perfect_square(PY_LONG_LONG __pyx_v_n, CYTHON_UNUSED int __pyx_skip_dispatch) {
   PY_LONG_LONG __pyx_v_root;
   int __pyx_r;
 /* … */
   /* function exit code */
-  __pyx_L1_error:;
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("cy_fermat.is_perfect_square", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9cy_fermat_1is_perfect_square(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_10ferma_fact_1is_perfect_square(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_9cy_fermat_1is_perfect_square = {"is_perfect_square", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_9cy_fermat_1is_perfect_square, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_9cy_fermat_1is_perfect_square(PyObject *__pyx_self, 
+<span class='py_macro_api'>PyDoc_STRVAR</span>(__pyx_doc_10ferma_fact_is_perfect_square, "\320\237\321\200\320\276\320\262\320\265\321\200\321\217\320\265\321\202, \321\217\320\262\320\273\321\217\320\265\321\202\321\201\321\217 \320\273\320\270 \321\207\320\270\321\201\320\273\320\276 \320\277\320\276\320\273\320\275\321\213\320\274 \320\272\320\262\320\260\320\264\321\200\320\260\321\202\320\276\320\274.");
+static PyMethodDef __pyx_mdef_10ferma_fact_1is_perfect_square = {"is_perfect_square", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_10ferma_fact_1is_perfect_square, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_10ferma_fact_is_perfect_square};
+static PyObject *__pyx_pw_10ferma_fact_1is_perfect_square(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -387,23 +447,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)<span class='pyx_c_api'>__Pyx_Arg_NewRef_FASTCALL</span>(values[0]);
           kw_args--;
         }
-        else if (unlikely(<span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 10, __pyx_L3_error)</span>
+        else if (unlikely(<span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 6, __pyx_L3_error)</span>
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args &gt; 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(<span class='pyx_c_api'>__Pyx_ParseOptionalKeywords</span>(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "is_perfect_square") &lt; 0)) <span class='error_goto'>__PYX_ERR(0, 10, __pyx_L3_error)</span>
+        if (unlikely(<span class='pyx_c_api'>__Pyx_ParseOptionalKeywords</span>(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "is_perfect_square") &lt; 0)) <span class='error_goto'>__PYX_ERR(0, 6, __pyx_L3_error)</span>
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = <span class='pyx_c_api'>__Pyx_Arg_FASTCALL</span>(__pyx_args, 0);
     }
-    __pyx_v_n = <span class='pyx_c_api'>__Pyx_PyInt_As_PY_LONG_LONG</span>(values[0]); if (unlikely((__pyx_v_n == (PY_LONG_LONG)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 10, __pyx_L3_error)</span>
+    __pyx_v_n = <span class='pyx_c_api'>__Pyx_PyInt_As_PY_LONG_LONG</span>(values[0]); if (unlikely((__pyx_v_n == (PY_LONG_LONG)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 6, __pyx_L3_error)</span>
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("is_perfect_square", 1, 1, 1, __pyx_nargs); <span class='error_goto'>__PYX_ERR(0, 10, __pyx_L3_error)</span>
+  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("is_perfect_square", 1, 1, 1, __pyx_nargs); <span class='error_goto'>__PYX_ERR(0, 6, __pyx_L3_error)</span>
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -413,11 +473,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       <span class='pyx_c_api'>__Pyx_Arg_XDECREF_FASTCALL</span>(values[__pyx_temp]);
     }
   }
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("cy_fermat.is_perfect_square", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("ferma_fact.is_perfect_square", __pyx_clineno, __pyx_lineno, __pyx_filename);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9cy_fermat_is_perfect_square(__pyx_self, __pyx_v_n);
+  __pyx_r = __pyx_pf_10ferma_fact_is_perfect_square(__pyx_self, __pyx_v_n);
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -433,11 +493,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9cy_fermat_is_perfect_square(CYTHON_UNUSED PyObject *__pyx_self, PY_LONG_LONG __pyx_v_n) {
+static PyObject *__pyx_pf_10ferma_fact_is_perfect_square(CYTHON_UNUSED PyObject *__pyx_self, PY_LONG_LONG __pyx_v_n) {
   PyObject *__pyx_r = NULL;
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
-  __pyx_t_1 = __pyx_f_9cy_fermat_is_perfect_square(__pyx_v_n, 0); if (unlikely(__pyx_t_1 == ((int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 10, __pyx_L1_error)</span>
-  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyBool_FromLong</span>(__pyx_t_1);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)</span>
+  __pyx_t_1 = __pyx_f_10ferma_fact_is_perfect_square(__pyx_v_n, 0); if (unlikely(__pyx_t_1 == ((int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 6, __pyx_L1_error)</span>
+  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyBool_FromLong</span>(__pyx_t_1);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 6, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -446,7 +506,7 @@ static PyObject *__pyx_pf_9cy_fermat_is_perfect_square(CYTHON_UNUSED PyObject *_
   /* function exit code */
   __pyx_L1_error:;
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_2);
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("cy_fermat.is_perfect_square", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("ferma_fact.is_perfect_square", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
@@ -454,31 +514,33 @@ static PyObject *__pyx_pf_9cy_fermat_is_perfect_square(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 /* … */
-  __pyx_tuple_ = <span class='py_c_api'>PyTuple_Pack</span>(1, __pyx_n_s_n);<span class='error_goto'> if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 10, __pyx_L1_error)</span>
+  __pyx_tuple_ = <span class='py_c_api'>PyTuple_Pack</span>(1, __pyx_n_s_n);<span class='error_goto'> if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 6, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_tuple_);
   <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_tuple_);
 /* … */
-  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_CyFunction_New</span>(&amp;__pyx_mdef_9cy_fermat_1is_perfect_square, 0, __pyx_n_s_is_perfect_square, NULL, __pyx_n_s_cy_fermat, __pyx_d, ((PyObject *)__pyx_codeobj__2));<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)</span>
+  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_CyFunction_New</span>(&amp;__pyx_mdef_10ferma_fact_1is_perfect_square, 0, __pyx_n_s_is_perfect_square, NULL, __pyx_n_s_ferma_fact, __pyx_d, ((PyObject *)__pyx_codeobj__2));<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 6, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
-  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_d, __pyx_n_s_is_perfect_square, __pyx_t_2) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 10, __pyx_L1_error)</span>
+  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_d, __pyx_n_s_is_perfect_square, __pyx_t_2) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 6, __pyx_L1_error)</span>
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_codeobj__2 = (PyObject*)<span class='pyx_c_api'>__Pyx_PyCode_New</span>(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cy_fermat_pyx, __pyx_n_s_is_perfect_square, 10, __pyx_empty_bytes);<span class='error_goto'> if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 10, __pyx_L1_error)</span>
-</pre><pre class="cython line score-5" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">11</span>:     cdef long long root = isqrt(n)</pre>
-<pre class='cython code score-5 '>  __pyx_t_1 = __pyx_f_9cy_fermat_isqrt(__pyx_v_n); if (unlikely(__pyx_t_1 == ((int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L1_error)</span>
-  __pyx_v_root = __pyx_t_1;
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">12</span>:     return root * root == n</pre>
+  __pyx_codeobj__2 = (PyObject*)<span class='pyx_c_api'>__Pyx_PyCode_New</span>(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_ferma_fact_pyx, __pyx_n_s_is_perfect_square, 6, __pyx_empty_bytes);<span class='error_goto'> if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 6, __pyx_L1_error)</span>
+</pre><pre class="cython line score-0">&#xA0;<span class="">07</span>: <span class="w">    </span><span class="sd">&quot;&quot;&quot;Проверяет, является ли число полным квадратом.&quot;&quot;&quot;</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">08</span>:     <span class="k">cdef</span><span class="w"> </span><span class="kt">long</span> <span class="kt">long</span> <span class="nf">root</span><span class="w"> </span><span class="o">=</span> <span class="o">&lt;</span><span class="nb">long</span> <span class="nb">long</span><span class="o">&gt;</span><span class="n">floor</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">))</span></pre>
+<pre class='cython code score-0 '>  __pyx_v_root = ((PY_LONG_LONG)floor(sqrt(__pyx_v_n)));
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">09</span>:     <span class="k">return</span> <span class="n">root</span> <span class="o">*</span> <span class="n">root</span> <span class="o">==</span> <span class="n">n</span></pre>
 <pre class='cython code score-0 '>  __pyx_r = ((__pyx_v_root * __pyx_v_root) == __pyx_v_n);
   goto __pyx_L0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">13</span>: </pre>
-<pre class="cython line score-63" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">14</span>: cpdef tuple fermat_factorization(long long N):</pre>
-<pre class='cython code score-63 '>static PyObject *__pyx_pw_9cy_fermat_3fermat_factorization(PyObject *__pyx_self, 
+</pre><pre class="cython line score-0">&#xA0;<span class="">10</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">11</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">boundscheck</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">12</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">wraparound</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span></pre>
+<pre class="cython line score-64" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">13</span>: <span class="k">cpdef</span><span class="w"> </span><span class="kt">tuple</span> <span class="nf">fermat_factorization</span><span class="p">(</span><span class="nb">long</span> <span class="nb">long</span> <span class="n">N</span><span class="p">):</span></pre>
+<pre class='cython code score-64 '>static PyObject *__pyx_pw_10ferma_fact_3fermat_factorization(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyObject *__pyx_f_9cy_fermat_fermat_factorization(PY_LONG_LONG __pyx_v_N, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_f_10ferma_fact_fermat_factorization(PY_LONG_LONG __pyx_v_N, CYTHON_UNUSED int __pyx_skip_dispatch) {
   PY_LONG_LONG __pyx_v_x;
   PY_LONG_LONG __pyx_v_y_squared;
   PY_LONG_LONG __pyx_v_y;
@@ -490,8 +552,8 @@ static PyObject *__pyx_f_9cy_fermat_fermat_factorization(PY_LONG_LONG __pyx_v_N,
   __pyx_L1_error:;
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_2);
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_3);
-  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_5);
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("cy_fermat.fermat_factorization", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_4);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("ferma_fact.fermat_factorization", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
@@ -500,15 +562,16 @@ static PyObject *__pyx_f_9cy_fermat_fermat_factorization(PY_LONG_LONG __pyx_v_N,
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9cy_fermat_3fermat_factorization(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_10ferma_fact_3fermat_factorization(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_9cy_fermat_3fermat_factorization = {"fermat_factorization", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_9cy_fermat_3fermat_factorization, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_9cy_fermat_3fermat_factorization(PyObject *__pyx_self, 
+<span class='py_macro_api'>PyDoc_STRVAR</span>(__pyx_doc_10ferma_fact_2fermat_factorization, "\320\240\320\260\320\267\320\273\320\276\320\266\320\265\320\275\320\270\320\265 \321\207\320\270\321\201\320\273\320\260 N \320\275\320\260 \320\274\320\275\320\276\320\266\320\270\321\202\320\265\320\273\320\270 \320\274\320\265\321\202\320\276\320\264\320\276\320\274 \320\244\320\265\321\200\320\274\320\260.");
+static PyMethodDef __pyx_mdef_10ferma_fact_3fermat_factorization = {"fermat_factorization", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_10ferma_fact_3fermat_factorization, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_10ferma_fact_2fermat_factorization};
+static PyObject *__pyx_pw_10ferma_fact_3fermat_factorization(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -549,23 +612,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)<span class='pyx_c_api'>__Pyx_Arg_NewRef_FASTCALL</span>(values[0]);
           kw_args--;
         }
-        else if (unlikely(<span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 14, __pyx_L3_error)</span>
+        else if (unlikely(<span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 13, __pyx_L3_error)</span>
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args &gt; 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(<span class='pyx_c_api'>__Pyx_ParseOptionalKeywords</span>(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "fermat_factorization") &lt; 0)) <span class='error_goto'>__PYX_ERR(0, 14, __pyx_L3_error)</span>
+        if (unlikely(<span class='pyx_c_api'>__Pyx_ParseOptionalKeywords</span>(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "fermat_factorization") &lt; 0)) <span class='error_goto'>__PYX_ERR(0, 13, __pyx_L3_error)</span>
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = <span class='pyx_c_api'>__Pyx_Arg_FASTCALL</span>(__pyx_args, 0);
     }
-    __pyx_v_N = <span class='pyx_c_api'>__Pyx_PyInt_As_PY_LONG_LONG</span>(values[0]); if (unlikely((__pyx_v_N == (PY_LONG_LONG)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 14, __pyx_L3_error)</span>
+    __pyx_v_N = <span class='pyx_c_api'>__Pyx_PyInt_As_PY_LONG_LONG</span>(values[0]); if (unlikely((__pyx_v_N == (PY_LONG_LONG)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 13, __pyx_L3_error)</span>
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("fermat_factorization", 1, 1, 1, __pyx_nargs); <span class='error_goto'>__PYX_ERR(0, 14, __pyx_L3_error)</span>
+  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("fermat_factorization", 1, 1, 1, __pyx_nargs); <span class='error_goto'>__PYX_ERR(0, 13, __pyx_L3_error)</span>
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -575,11 +638,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       <span class='pyx_c_api'>__Pyx_Arg_XDECREF_FASTCALL</span>(values[__pyx_temp]);
     }
   }
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("cy_fermat.fermat_factorization", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("ferma_fact.fermat_factorization", __pyx_clineno, __pyx_lineno, __pyx_filename);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9cy_fermat_2fermat_factorization(__pyx_self, __pyx_v_N);
+  __pyx_r = __pyx_pf_10ferma_fact_2fermat_factorization(__pyx_self, __pyx_v_N);
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -595,10 +658,10 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9cy_fermat_2fermat_factorization(CYTHON_UNUSED PyObject *__pyx_self, PY_LONG_LONG __pyx_v_N) {
+static PyObject *__pyx_pf_10ferma_fact_2fermat_factorization(CYTHON_UNUSED PyObject *__pyx_self, PY_LONG_LONG __pyx_v_N) {
   PyObject *__pyx_r = NULL;
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
-  __pyx_t_1 = __pyx_f_9cy_fermat_fermat_factorization(__pyx_v_N, 0);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)</span>
+  __pyx_t_1 = __pyx_f_10ferma_fact_fermat_factorization(__pyx_v_N, 0);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 13, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -607,7 +670,7 @@ static PyObject *__pyx_pf_9cy_fermat_2fermat_factorization(CYTHON_UNUSED PyObjec
   /* function exit code */
   __pyx_L1_error:;
   <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_1);
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("cy_fermat.fermat_factorization", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("ferma_fact.fermat_factorization", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
@@ -615,69 +678,70 @@ static PyObject *__pyx_pf_9cy_fermat_2fermat_factorization(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 /* … */
-  __pyx_tuple__3 = <span class='py_c_api'>PyTuple_Pack</span>(1, __pyx_n_s_N);<span class='error_goto'> if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 14, __pyx_L1_error)</span>
+  __pyx_tuple__3 = <span class='py_c_api'>PyTuple_Pack</span>(1, __pyx_n_s_N);<span class='error_goto'> if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 13, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_tuple__3);
   <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_tuple__3);
 /* … */
-  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_CyFunction_New</span>(&amp;__pyx_mdef_9cy_fermat_3fermat_factorization, 0, __pyx_n_s_fermat_factorization, NULL, __pyx_n_s_cy_fermat, __pyx_d, ((PyObject *)__pyx_codeobj__4));<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 14, __pyx_L1_error)</span>
+  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_CyFunction_New</span>(&amp;__pyx_mdef_10ferma_fact_3fermat_factorization, 0, __pyx_n_s_fermat_factorization, NULL, __pyx_n_s_ferma_fact, __pyx_d, ((PyObject *)__pyx_codeobj__4));<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
-  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_d, __pyx_n_s_fermat_factorization, __pyx_t_2) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 14, __pyx_L1_error)</span>
+  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_d, __pyx_n_s_fermat_factorization, __pyx_t_2) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 13, __pyx_L1_error)</span>
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">15</span>:     cdef long long x, y_squared, y</pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">16</span>:     if N % 2 == 0:</pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">14</span>: <span class="w">    </span><span class="sd">&quot;&quot;&quot;Разложение числа N на множители методом Ферма.&quot;&quot;&quot;</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">15</span>:     <span class="k">if</span> <span class="n">N</span> <span class="o">%</span> <span class="mf">2</span> <span class="o">==</span> <span class="mf">0</span><span class="p">:</span></pre>
 <pre class='cython code score-0 '>  __pyx_t_1 = (__Pyx_mod_PY_LONG_LONG(__pyx_v_N, 2) == 0);
   if (__pyx_t_1) {
 /* … */
   }
-</pre><pre class="cython line score-13" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">17</span>:         return (2, N // 2)</pre>
+</pre><pre class="cython line score-13" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">16</span>:         <span class="k">return</span> <span class="mf">2</span><span class="p">,</span> <span class="n">N</span> <span class="o">//</span> <span class="mf">2</span>  <span class="c"># Если N четное, делим на 2</span></pre>
 <pre class='cython code score-13 '>    <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
-    __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyInt_From_PY_LONG_LONG</span>(__Pyx_div_PY_LONG_LONG(__pyx_v_N, 2));<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)</span>
+    __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyInt_From_PY_LONG_LONG</span>(__Pyx_div_PY_LONG_LONG(__pyx_v_N, 2));<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 16, __pyx_L1_error)</span>
     <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
-    __pyx_t_3 = <span class='py_c_api'>PyTuple_New</span>(2);<span class='error_goto'> if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 17, __pyx_L1_error)</span>
+    __pyx_t_3 = <span class='py_c_api'>PyTuple_New</span>(2);<span class='error_goto'> if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 16, __pyx_L1_error)</span>
     <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_3);
     <span class='pyx_macro_api'>__Pyx_INCREF</span>(__pyx_int_2);
     <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_int_2);
-    if (<span class='pyx_c_api'>__Pyx_PyTuple_SET_ITEM</span>(__pyx_t_3, 0, __pyx_int_2)) <span class='error_goto'>__PYX_ERR(0, 17, __pyx_L1_error)</span>;
+    if (<span class='pyx_c_api'>__Pyx_PyTuple_SET_ITEM</span>(__pyx_t_3, 0, __pyx_int_2)) <span class='error_goto'>__PYX_ERR(0, 16, __pyx_L1_error)</span>;
     <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_t_2);
-    if (<span class='pyx_c_api'>__Pyx_PyTuple_SET_ITEM</span>(__pyx_t_3, 1, __pyx_t_2)) <span class='error_goto'>__PYX_ERR(0, 17, __pyx_L1_error)</span>;
+    if (<span class='pyx_c_api'>__Pyx_PyTuple_SET_ITEM</span>(__pyx_t_3, 1, __pyx_t_2)) <span class='error_goto'>__PYX_ERR(0, 16, __pyx_L1_error)</span>;
     __pyx_t_2 = 0;
     __pyx_r = ((PyObject*)__pyx_t_3);
     __pyx_t_3 = 0;
     goto __pyx_L0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">18</span>: </pre>
-<pre class="cython line score-5" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">19</span>:     x = isqrt(N) + 1</pre>
-<pre class='cython code score-5 '>  __pyx_t_4 = __pyx_f_9cy_fermat_isqrt(__pyx_v_N); if (unlikely(__pyx_t_4 == ((int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 19, __pyx_L1_error)</span>
-  __pyx_v_x = (__pyx_t_4 + 1);
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">20</span>:     while True:</pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">17</span>: </pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">18</span>:     <span class="k">cdef</span><span class="w"> </span><span class="kt">long</span> <span class="kt">long</span> <span class="nf">x</span><span class="w"> </span><span class="o">=</span> <span class="o">&lt;</span><span class="nb">long</span> <span class="nb">long</span><span class="o">&gt;</span><span class="n">floor</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">N</span><span class="p">))</span> <span class="o">+</span> <span class="mf">1</span>  <span class="c"># Начинаем с ближайшего целого числа к √N</span></pre>
+<pre class='cython code score-0 '>  __pyx_v_x = (((PY_LONG_LONG)floor(sqrt(__pyx_v_N))) + 1);
+</pre><pre class="cython line score-0">&#xA0;<span class="">19</span>:     <span class="k">cdef</span><span class="w"> </span><span class="kt">long</span> <span class="kt">long</span> <span class="nf">y_squared</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">20</span>:     <span class="k">cdef</span><span class="w"> </span><span class="kt">long</span> <span class="kt">long</span> <span class="nf">y</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">21</span>: <span class="w">    </span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">22</span>:     <span class="k">while</span> <span class="bp">True</span><span class="p">:</span></pre>
 <pre class='cython code score-0 '>  while (1) {
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">21</span>:         y_squared = x * x - N</pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">23</span>:         <span class="n">y_squared</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="n">N</span></pre>
 <pre class='cython code score-0 '>    __pyx_v_y_squared = ((__pyx_v_x * __pyx_v_x) - __pyx_v_N);
-</pre><pre class="cython line score-5" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">22</span>:         if is_perfect_square(y_squared):</pre>
-<pre class='cython code score-5 '>    __pyx_t_1 = __pyx_f_9cy_fermat_is_perfect_square(__pyx_v_y_squared, 0); if (unlikely(__pyx_t_1 == ((int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 22, __pyx_L1_error)</span>
+</pre><pre class="cython line score-5" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">24</span>:         <span class="k">if</span> <span class="n">is_perfect_square</span><span class="p">(</span><span class="n">y_squared</span><span class="p">):</span></pre>
+<pre class='cython code score-5 '>    __pyx_t_1 = __pyx_f_10ferma_fact_is_perfect_square(__pyx_v_y_squared, 0); if (unlikely(__pyx_t_1 == ((int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 24, __pyx_L1_error)</span>
     if (__pyx_t_1) {
 /* … */
     }
-</pre><pre class="cython line score-5" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">23</span>:             y = isqrt(y_squared)</pre>
-<pre class='cython code score-5 '>      __pyx_t_4 = __pyx_f_9cy_fermat_isqrt(__pyx_v_y_squared); if (unlikely(__pyx_t_4 == ((int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 23, __pyx_L1_error)</span>
-      __pyx_v_y = __pyx_t_4;
-</pre><pre class="cython line score-14" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">24</span>:             return (x - y, x + y)</pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">25</span>:             <span class="n">y</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nb">long</span> <span class="nb">long</span><span class="o">&gt;</span><span class="n">floor</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">y_squared</span><span class="p">))</span></pre>
+<pre class='cython code score-0 '>      __pyx_v_y = ((PY_LONG_LONG)floor(sqrt(__pyx_v_y_squared)));
+</pre><pre class="cython line score-14" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">26</span>:             <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>  <span class="c"># Возвращаем найденные множители</span></pre>
 <pre class='cython code score-14 '>      <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_r);
-      __pyx_t_3 = <span class='pyx_c_api'>__Pyx_PyInt_From_PY_LONG_LONG</span>((__pyx_v_x - __pyx_v_y));<span class='error_goto'> if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 24, __pyx_L1_error)</span>
+      __pyx_t_3 = <span class='pyx_c_api'>__Pyx_PyInt_From_PY_LONG_LONG</span>((__pyx_v_x - __pyx_v_y));<span class='error_goto'> if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 26, __pyx_L1_error)</span>
       <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_3);
-      __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyInt_From_PY_LONG_LONG</span>((__pyx_v_x + __pyx_v_y));<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 24, __pyx_L1_error)</span>
+      __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyInt_From_PY_LONG_LONG</span>((__pyx_v_x + __pyx_v_y));<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 26, __pyx_L1_error)</span>
       <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
-      __pyx_t_5 = <span class='py_c_api'>PyTuple_New</span>(2);<span class='error_goto'> if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 24, __pyx_L1_error)</span>
-      <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_5);
+      __pyx_t_4 = <span class='py_c_api'>PyTuple_New</span>(2);<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 26, __pyx_L1_error)</span>
+      <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_4);
       <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_t_3);
-      if (<span class='pyx_c_api'>__Pyx_PyTuple_SET_ITEM</span>(__pyx_t_5, 0, __pyx_t_3)) <span class='error_goto'>__PYX_ERR(0, 24, __pyx_L1_error)</span>;
+      if (<span class='pyx_c_api'>__Pyx_PyTuple_SET_ITEM</span>(__pyx_t_4, 0, __pyx_t_3)) <span class='error_goto'>__PYX_ERR(0, 26, __pyx_L1_error)</span>;
       <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_t_2);
-      if (<span class='pyx_c_api'>__Pyx_PyTuple_SET_ITEM</span>(__pyx_t_5, 1, __pyx_t_2)) <span class='error_goto'>__PYX_ERR(0, 24, __pyx_L1_error)</span>;
+      if (<span class='pyx_c_api'>__Pyx_PyTuple_SET_ITEM</span>(__pyx_t_4, 1, __pyx_t_2)) <span class='error_goto'>__PYX_ERR(0, 26, __pyx_L1_error)</span>;
       __pyx_t_3 = 0;
       __pyx_t_2 = 0;
-      __pyx_r = ((PyObject*)__pyx_t_5);
-      __pyx_t_5 = 0;
+      __pyx_r = ((PyObject*)__pyx_t_4);
+      __pyx_t_4 = 0;
       goto __pyx_L0;
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">25</span>:         x += 1</pre>
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">27</span>:         <span class="n">x</span> <span class="o">+=</span> <span class="mf">1</span>  <span class="c"># Увеличиваем x </span></pre>
 <pre class='cython code score-0 '>    __pyx_v_x = (__pyx_v_x + 1);
   }
 </pre></div></body></html>
